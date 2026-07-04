@@ -1,0 +1,138 @@
+/**
+ * @file: arnav.profile.config.ts
+ * @author: Arnav Khantwal
+ * @summary: MCA student, developer, designer, and AI project builder.
+ */
+
+// --------------------------------------------------
+// 1. CORE DEPENDENCIES & SKILLS
+// --------------------------------------------------
+
+const TECH_STACK = {
+  programming: [
+    "C++",        // DSA + problem solving
+    "Java",       // OOP + core concepts
+    "Python",     // AI/ML + scripting
+    "JavaScript", // Web development
+  ],
+
+  webDevelopment: [
+    "React.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "TailwindCSS",
+  ],
+
+  aiTools: [
+    "Gemini API",
+    "Microsoft Foundry",
+    "AI Agents",
+    "Prompt Engineering",
+  ],
+
+  tools: [
+    "GitHub",
+    "VS Code",
+    "Figma",
+    "Canva",
+    "MS Office",
+  ],
+};
+
+// --------------------------------------------------
+// 2. EXPERIENCE LOG
+// --------------------------------------------------
+
+class ProfessionalHistory {
+  
+  /**
+   * CURRENT FOCUS
+   * @period 2025 - Present
+   */
+  public async MCA_Journey(): Promise<Impact> {
+    const role = "MCA Student & Aspiring Software Developer";
+
+    const learning = [
+      "Data Structures & Algorithms",
+      "Full-Stack Development",
+      "AI Agents",
+      "Cloud & Operations Basics",
+    ];
+
+    const leadership = [
+      "IT Club Coordinator",
+      "Editorial Club Design Head",
+    ];
+
+    const projects = await build([
+      "Open Source Mentor AI",
+      "HireReady - AI Placement Coach",
+      "React + AI Hackathon Projects",
+    ]);
+
+    return { role, learning, leadership, projects };
+  }
+
+  /**
+   * DESIGN & CREATIVE WORK
+   * @period 2024 - Present
+   */
+  public Editorial_Club(): void {
+    this.role = "Head of Design Team";
+    this.focus = "Newsletter Design, Themes, Layouts & Visual Identity";
+
+    // Designed monthly department newsletter themes
+    // Worked with Figma, Canva, custom color palettes and creative assets
+  }
+}
+
+// --------------------------------------------------
+// 3. COMPETITIVE ACHIEVEMENTS
+// --------------------------------------------------
+
+interface Achievement {
+  title: string;
+  category: string;
+  impact: string;
+}
+
+const achievementLog: Achievement[] = [
+  {
+    title: "Microsoft Agents League Hackathon",
+    category: "AI Agents / Full-Stack Development",
+    impact: "Built Open Source Mentor AI using React, Express, GitHub APIs and Gemini",
+  },
+  {
+    title: "Inter-College IT Fest Winner",
+    category: "CS Fundamentals & IT Quiz",
+    impact: "Won quizzes based on core computer science concepts",
+  },
+  {
+    title: "College Minor Projects",
+    category: "Team Development",
+    impact: "Built academic projects while collaborating in a small team",
+  },
+];
+
+// --------------------------------------------------
+// 4. ACADEMIC BACKGROUND
+// --------------------------------------------------
+
+const education = new Map<string, string>([
+  ["Panjab University", "BCA - 74%"],
+  ["Current", "MCA Student"],
+]);
+
+export default new ProfessionalHistory();
+
+
+# TERMINAL OUTPUT
+# ---------------------------------------
+$ arnav --status
+> Status: Learning. Building. Improving.
+> Role: MCA Student | Developer | Designer
+> Focus: DSA + Full-Stack + AI Projects
+> Location: India
+> Loading Potential... [||||||||||] 100%
+> Ready for Opportunities.
