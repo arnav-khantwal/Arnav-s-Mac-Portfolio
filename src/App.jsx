@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import "./App.scss"
 import Dock from './components/Dock.jsx'
 import Nav from './components/Nav.jsx'
@@ -6,20 +7,33 @@ import Github from './components/windows/Github.jsx'
 import Note from './components/windows/note.jsx'
 import Resume from "./components/windows/Resume.jsx"
 import Spotify from "./components/windows/Spotify.jsx"
+import CLI from "./components/windows/CLI.jsx"
 
 function App() {
+
+  const [windowsState, setWindowsState] = useState({
+    github: false,
+    note: false,
+    resume: false,
+    spotify: false,
+    cli: false
+  })
   
   return (
     <main>
       <Nav />
-      <Dock />
+      <Dock windowsState={windowsState} setWindowsState={setWindowsState} />
       
-      <Note />
-      <Resume />
+      {windowsState.resume &&<Resume windowName="resume"  setWindowsState={setWindowsState} />}
 
-      <Github />
+      
+      {windowsState.spotify && <Spotify windowName="spotify" setWindowsState={setWindowsState} />}
+      
+      {windowsState.cli && <CLI windowName="cli" setWindowsState={setWindowsState} />}
+      {windowsState.note && <Note windowName="note"  setWindowsState={setWindowsState} />}
 
-      <Spotify />
+    {windowsState.github && <Github windowName="github" setWindowsState={setWindowsState} />}
+
     </main>
   )
 }
